@@ -1,0 +1,83 @@
+Mentor and Student API
+
+Backend source code : https://backend-project-3-di17.onrender.com/
+
+GitHub link: https://github.com/arun972000/Backend-project-3.git
+
+
+Task One: Create Mentor
+
+Endpoint: POST /mentors
+Endpoint :GET /mentors
+
+Description: Create a new mentor.
+
+Request:
+
+json(req.body)
+Copy code
+{
+  "mentor_name": "John Doe"
+}
+
+Task Two: Create Student
+
+Endpoint: POST /students
+Endpoint :GET /students
+
+Description: Create a new student
+
+Request:
+
+json(req.body)
+Copy code
+{
+  "student_name": "John Doe"
+}
+
+
+
+Task Three: Assign Multiple Students to Mentor
+Endpoint: PUT /mentors/assign-students/:id
+
+Description: Assign multiple students to a mentor.(Get mentor id from mentor details)
+
+Request:
+
+json(req.body)
+Copy code
+{
+  "mentor_name":"john Doe"
+  "students": ["Alice", "Bob", "Charlie"]
+}
+
+
+
+Task Four: Assign Single Student to Mentor
+Endpoint: PUT /students/assign-mentor/:id
+
+Description: Assign a single student to a mentor.(Get student id from student details)
+
+Request:
+
+json
+Copy code
+{
+  "student_name": "Eve"
+  "mentor_name" :"Raj"
+}
+Response:
+
+json
+Copy code
+{
+  "message": "Student assigned to mentor successfully."
+}
+
+
+Task Five: Get Mentor Details
+Endpoint: GET mentors/:id
+
+Description: Retrieve mentor details by ID.(Get id from mentor details)
+
+
